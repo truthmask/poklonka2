@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./css/img/логотип.png">
+
+    <script src="https://kit.fontawesome.com/5f5c0e98df.js" crossorigin="anonymous"></script>
+
+    <title>POKLONKA</title>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader preloader--hide" id="preloader">
+        <div class="loader"></div>
+
+        <div class="preloader__loader">
+            <span class="preloader__percents">
+                <span id="percents">0</span>%
+            </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <h1 class="title">POKLONKA</h1>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section id="intro">
+        <video autoplay loop muted plays-inline playsinline id="dekcstop-video" data-wf-ignore="true" data-object-fit="cover">
+            <source src="./css/img/video/set.mp4" type="video/mp4" data-wf-ignore="true">
+        </video>
+        <video autoplay loop muted plays-inline playsinline id="media-video" class="none" data-wf-ignore="true" data-object-fit="cover">
+            <source src="./css/img/video/burger.mp4" type="video/mp4" data-wf-ignore="true">
+        </video>
+    </section>
+
+    <!-- Nav-menu -->
+    <section id="nav-menu">
+        <h3 class="nav-title">Кухня</h3>
+            <nav class="nav">
+                <ul class="tab-titles">
+                    <li><a class="tab-links" onclick="opentab('breakfast')">Завтрак</a></li>
+                    <li><a class="tab-links" onclick="opentab('salad')">Салаты</a></li>
+                    <li><a class="tab-links" onclick="opentab('burger')">Бургеры</a></li>
+                    <li><a class="tab-links" onclick="opentab('hot-eat')">Горячие блюда</a></li>
+                    <li><a class="tab-links" onclick="opentab('garnish')">Гарниры</a></li>
+                    <li><a class="tab-links" onclick="opentab('soup')">Супы</a></li>
+                    <li><a class="tab-links" onclick="opentab('hot-snack')">Горячие закуски</a></li>
+                    <li><a class="tab-links" onclick="opentab('cold-snack')">Холодные закуски</a></li>
+                    <li><a class="tab-links" onclick="opentab('sauce')">Соусы</a></li>
+                    <li><a class="tab-links" onclick="opentab('dessert')">Десерты</a></li>
+                    <li><a class="tab-links" onclick="opentab('nuts')">Орехи</a></li>
+                </ul>
+            </nav>
+
+        <h3 class="nav-title">Бар</h3>
+            <nav class="nav">
+                <ul class="tab-titles">
+                    <li><a class="tab-links" onclick="opentab('lemonade')">Лимонады</a></li>
+                    <li><a class="tab-links" onclick="opentab('cold')">Напитки</a></li>
+                    <li><a class="tab-links" onclick="opentab('milk')">Молочные коктейли</a></li>
+                    <li><a class="tab-links" onclick="opentab('smoothie')">Фреши и смузи</a></li>
+                    <li><a class="tab-links" onclick="opentab('juice')">Сок</a></li>
+                    <li><a class="tab-links" onclick="opentab('coffee')">Кофе</a></li>
+                    <li><a class="tab-links" onclick="opentab('tea')">Чай</a></li>
+                    <li><a class="tab-links" onclick="opentab('hot-alco')">Горячие алкогольные</a></li>
+                    <li><a class="tab-links" onclick="opentab('water')">Вода</a></li>
+                    <li><a class="tab-links" onclick="opentab('Draft')">Пиво Draft</a></li>
+                    <li><a class="tab-links" onclick="opentab('Jaws')">Jaws brewery</a></li>
+                    <li><a class="tab-links" onclick="opentab('Brewlok')">Brewlok</a></li>
+                    <li><a class="tab-links" onclick="opentab('red150')">Красное 150мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('red750')">Красное 750мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('rose')">Розовое</a></li>
+                    <li><a class="tab-links" onclick="opentab('white150')">Белое 150мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('white750')">Белое 750мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('Sparkling150')">Игристое 150мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('Sparkling750')">Игристое 750мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('vermut')">Порто/Вермут 75мл</a></li>
+                    <li><a class="tab-links" onclick="opentab('whisky')">Виски</a></li>
+                    <li><a class="tab-links" onclick="opentab('Scotland')">Виски</a></li>
+                    <li><a class="tab-links" onclick="opentab('rum')">Ром</a></li>
+                    <li><a class="tab-links" onclick="opentab('gin')">Джин</a></li>
+                    <li><a class="tab-links" onclick="opentab('digestif')">Дижестив</a></li>
+                    <li><a class="tab-links" onclick="opentab('dist')">Дистиляты</a></li>
+                    <li><a class="tab-links" onclick="opentab('brend')">Бренди</a></li>
+                    <li><a class="tab-links" onclick="opentab('vodka')">Водка</a></li>
+                    <li><a class="tab-links" onclick="opentab('nast')">Настойки</a></li>
+                    <li><a class="tab-links" onclick="opentab('coctail')">Коктейли</a></li>
+                </ul>
+            </nav>
+
+        <div class="container">
+            <div class="tab-contents active-tab" id="breakfast">
+                <h1>Завтрак</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/завтрак/англ-завтрак.jpeg" alt="">
+                        <h3>Английский завтрак</h3>
+                        <span>Завтрак</span>
+                        <p>Масса: 300гр</p>
+                        <div class="price">590₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/завтрак/сырники.jpeg" alt="">
+                        <h3>Сырники</h3>
+                        <span>Завтрак</span>
+                        <p>Масса: 170гр</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/завтрак/тост авокадо.jpg" alt="">
+                        <h3>Тост Авокадо</h3>
+                        <span>Завтрак</span>
+                        <p>Масса: 220гр</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/завтрак/бенедикт.jpg" alt="">
+                        <h3>Бенедикт</h3>
+                        <span>Завтрак</span>
+                        <p>Масса: 245гр</p>
+                        <div class="price">590₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/завтрак/завтрак от шефа.jpg" alt="">
+                        <h3>Завтрак от шефа</h3>
+                        <span>Завтрак</span>
+                        <p>Масса: 170гр</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="salad">
+                <h1>Салаты</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/салаты/хрустящие баклажаны.jpg" alt="">
+                        <h3>Хрустящие баклажаны</h3>
+                        <span>Салаты</span>
+                        <p>Масса: 210гр</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Цезарь с курицей</h3>
+                        <span>Салаты</span>
+                        <p>Масса: 220гр</p>
+                        <div class="price">590₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/салаты/цезарь с креветками.jpeg" alt="">
+                        <h3>Цезарь с креветками</h3>
+                        <span>Салаты</span>
+                        <p>Масса: 220гр</p>
+                        <div class="price">670₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/салаты/лосось и киноа.jpg" alt="">
+                        <h3>Лосось и киноа</h3>
+                        <span>Салаты</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">?₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="burger">
+                <h1>Бургеры</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/трфл.jpeg" alt="">
+                        <h3>Труфельный бургер</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: 345гр</p>
+                        <div class="price">570₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/чиз.jpeg" alt="">
+                        <h3>Классический Чизбургер</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: 350гр</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/блючиз.jpg" alt="">
+                        <h3>Блю чиз бургер</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">?₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/чиз на листьях.jpg" alt="">
+                        <h3>Классический Чизбургер на листьях</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: 350гр</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/трюф на листьях.jpg" alt="">
+                        <h3>Труфельный бургер на листьях</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: 345гр</p>
+                        <div class="price">570₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/блю на листьях.jpg" alt="">
+                        <h3>Блю чиз бургер на листьях</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">?₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/бургеры/хотдог.jpg" alt="">
+                        <h3>Хот-дог</h3>
+                        <span>Бургеры</span>
+                        <p>Масса: 250гр</p>
+                        <div class="price">350₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="hot-eat">
+                <h1>Горячие блюда</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор-блюда/мачете.jpg" alt="">
+                        <h3>Стейк Мачете</h3>
+                        <span>Горячие блюда</span>
+                        <p>Масса: 100гр</p>
+                        <div class="price">530₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор-блюда/стриплойн2.jpg" alt="">
+                        <h3>Стейк Стриплойн</h3>
+                        <span>Горячие блюда</span>
+                        <p>Масса: 100гр</p>
+                        <div class="price">570₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Стейк Топ Блейд</h3>
+                        <span>Горячие блюда</span>
+                        <p>Масса: 100гр</p>
+                        <div class="price">370₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор-блюда/бефстроганов.jpg" alt="">
+                        <h3>Бефстроганов</h3>
+                        <span>Горячие блюда</span>
+                        <p>Масса: 300гр</p>
+                        <div class="price">720₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор-блюда/лосось.jpg" alt="">
+                        <h3>Лосось на гриле</h3>
+                        <span>Горячие блюда</span>
+                        <p>Масса: 295гр</p>
+                        <div class="price">1450₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="garnish">
+                <h1>Гарниры</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гарниры/фри.jpg" alt="">
+                        <h3>Картофель фри</h3>
+                        <span>Гарниры</span>
+                        <p>Масса: 180гр</p>
+                        <div class="price">200₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гарниры/по деревенски.jpg" alt="">
+                        <h3>Картофель по-деревенски</h3>
+                        <span>Гарниры</span>
+                        <p>Масса: 200гр</p>
+                        <div class="price">150₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гарниры/пюре.jpg" alt="">
+                        <h3>Картофель пюре</h3>
+                        <span>Гарниры</span>
+                        <p>Масса: 180гр</p>
+                        <div class="price">200₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гарниры/овощи-гриль.jpg" alt="">
+                        <h3>Овощи на гриле</h3>
+                        <span>Гарниры</span>
+                        <p>Масса: 196гр</p>
+                        <div class="price">250₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="soup">
+                <h1>Супы</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/супы/поклонка.jpg" alt="">
+                        <h3>Поклонка</h3>
+                        <span>Супы</span>
+                        <p>Масса: 390гр</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/супы/борщ.jpg" alt="">
+                        <h3>Борщ</h3>
+                        <span>Супы</span>
+                        <p>Масса: 400гр</p>
+                        <div class="price">400₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/супы/сливочный-с морепродуктами.jpg" alt="">
+                        <h3>Сливочный суп с морепродуктами</h3>
+                        <span>Супы</span>
+                        <p>Масса: 390гр</p>
+                        <div class="price">470₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/супы/лапша-куриная.jpg" alt="">
+                        <h3>Суп-лапша куриная</h3>
+                        <span>Супы</span>
+                        <p>Масса: 250гр</p>
+                        <div class="price">250₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="hot-snack">
+                <h1>Горячие закуски</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор закуски/ассорти жареных колбас.jpg" alt="">
+                        <h3>Ассорти жареных колбас</h3>
+                        <span>Горячие закуски</span>
+                        <p>Масса: 520гр</p>
+                        <div class="price">1300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор закуски/гренки чесночные.jpg" alt="">
+                        <h3>Гренки чесночные</h3>
+                        <span>Горячие закуски</span>
+                        <p>Масса: 180гр</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор закуски/креветки на рисовых чипсах.jpg" alt="">
+                        <h3>Креветки на рисовых чипсах</h3>
+                        <span>Горячие закуски</span>
+                        <p>Масса: 136гр</p>
+                        <div class="price">650₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/гор закуски/куриные крылья.jpg" alt="">
+                        <h3>Куриные крылья (имбирные/BBQ)</h3>
+                        <span>Горячие закуски</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">?₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="cold-snack">
+                <h1>Холодные закуски</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/хол-закуски/паштет.jpg" alt="">
+                        <h3>Паштет</h3>
+                        <span>Холодные закуски</span>
+                        <p>Масса: 190гр</p>
+                        <div class="price">320₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/хол-закуски/тартар.jpg" alt="">
+                        <h3>Тартар</h3>
+                        <span>Холодные закуски</span>
+                        <p>Масса: 230гр</p>
+                        <div class="price">470₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/хол-закуски/сырное ассорти.jpg" alt="">
+                        <h3>Сырное ассорти</h3>
+                        <span>Холодные закуски</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">?₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="sauce">
+                <h1>Соусы</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/блючиз.jpg" alt="">
+                        <h3>Блю чиз</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">60₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/кетчуп.jpg" alt="">
+                        <h3>Кетчуп</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">40₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/ббг.jpg" alt="">
+                        <h3>BBQ</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">60₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/трфл.jpg" alt="">
+                        <h3>Трюфельный</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">60₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/горчица.jpg" alt="">
+                        <h3>Горчица</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">40₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/мед-гор.jpg" alt="">
+                        <h3>Медово-Горчичный</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">60₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/майонез.jpg" alt="">
+                        <h3>Майонез</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">40₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/соус/сметана.jpg" alt="">
+                        <h3>Сметана</h3>
+                        <span>Соусы</span>
+                        <p>Масса: 30гр</p>
+                        <div class="price">40₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="dessert">
+                <h1>Десерты</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Классический Чизкейк</h3>
+                        <span>Десерты</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Торт Морковный</h3>
+                        <span>Десерты</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">380₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Тарталетка малиновая</h3>
+                        <span>Десерты</span>
+                        <p>Масса: ?гр</p>
+                        <div class="price">360₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="nuts">
+                <h1>Орехи</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/сладкий кешью.jpg" alt="">
+                        <h3>Сладкий кешью</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/сладкий миндаль.jpg" alt="">
+                        <h3>Сладкий миндаль</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/соленый арахис.jpg" alt="">
+                        <h3>Соленый арахис</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/соленый кешью.jpg" alt="">
+                        <h3>Соленый кешью</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/соленый миндаль.jpg" alt="">
+                        <h3>Соленый миндаль</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/eat/орехи/фисташки.jpg" alt="">
+                        <h3>Фисташки</h3>
+                        <span>орехи</span>
+                        <p>Масса: 50гр</p>
+                        <div class="price">220₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="lemonade">
+                <h1>Лимонады</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/лимонады/вишня-лаванда.jpg" alt="">
+                        <h3>Вишня-лаванда</h3>
+                        <span>Лимонады</span>
+                        <p>Масса: 300мл/1000мл</p>
+                        <div class="price">300₽/850₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/лимонады/манго-ваниль.jpg" alt="">
+                        <h3>Манго-ваниль</h3>
+                        <span>Лимонады</span>
+                        <p>Масса: 300мл/1000мл</p>
+                        <div class="price">300₽/850₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/лимонады/облепиховый.jpg" alt="">
+                        <h3>Облепиховый лимонад</h3>
+                        <span>Лимонады</span>
+                        <p>Масса: 300мл/1000мл</p>
+                        <div class="price">300₽/850₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/лимонады/па.jpg" alt="">
+                        <h3>Папайя-апельсин</h3>
+                        <span>Лимонады</span>
+                        <p>Масса: 300мл/1000мл</p>
+                        <div class="price">300₽/850₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/лимонады/морс.jpg" alt="">
+                        <h3>Клюквенный морс</h3>
+                        <span>Лимонады</span>
+                        <p>Масса: 330мл</p>
+                        <div class="price">180₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="cold">
+                <h1>Напитки</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/прохладительные напитки/кола-зеро.jpg" alt="">
+                        <h3>Роял кола ZERO</h3>
+                        <span>Напитки</span>
+                        <p>Масса: 450мл</p>
+                        <div class="price">200₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/прохладительные напитки/кола.jpg" alt="">
+                        <h3>Роял кола</h3>
+                        <span>Напитки</span>
+                        <p>Масса: 450мл</p>
+                        <div class="price">200₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/прохладительные напитки/тоник-арбуз.jpg" alt="">
+                        <h3>Тоник Space арбуз</h3>
+                        <span>Напитки</span>
+                        <p>Масса: 330мл</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/прохладительные напитки/тоник-ориг.jpg" alt="">
+                        <h3>Тоник Space оригинальный</h3>
+                        <span>Напитки</span>
+                        <p>Масса: 330мл</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/прохладительные напитки/швепс.jpg" alt="">
+                        <h3>Shweppes tonic</h3>
+                        <span>Напитки</span>
+                        <p>Масса: 330мл</p>
+                        <div class="price">200₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="milk">
+                <h1>Молочные коктейли</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/молочные/ванильный.jpg" alt="">
+                        <h3>Ванильный</h3>
+                        <span>Молочные коктейли</span>
+                        <p>Масса: 400мл</p>
+                        <div class="price">280₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/молочные/клубничный.jpg" alt="">
+                        <h3>Клубничный</h3>
+                        <span>Молочные коктейли</span>
+                        <p>Масса: 400мл</p>
+                        <div class="price">280₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/молочные/шоколадный.jpg" alt="">
+                        <h3>шоколадный</h3>
+                        <span>Молочные коктейли</span>
+                        <p>Масса: 400мл</p>
+                        <div class="price">280₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/молочные/пикачу.jpg" alt="">
+                        <h3>Пикачу</h3>
+                        <span>Молочные коктейли</span>
+                        <p>Масса: 400мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="smoothie">
+                <h1>Фреши и смузи</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/фреши и смузи/яблочный.jpg" alt="">
+                        <h3>Яблочный фреш</h3>
+                        <span>Фреши и смузи</span>
+                        <p>Масса: 250мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/фреши и смузи/апельсиновый.jpg" alt="">
+                        <h3>Апельсиновый фреш</h3>
+                        <span>Фреши и смузи</span>
+                        <p>Масса: 250мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/фреши и смузи/грейпфрутовый.jpg" alt="">
+                        <h3>Грейпфрутовый фреш</h3>
+                        <span>Фреши и смузи</span>
+                        <p>Масса: 250мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/фреши и смузи/тропический.jpg" alt="">
+                        <h3>Тропический смузи</h3>
+                        <span>Фреши и смузи</span>
+                        <p>Масса: 350мл</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/фреши и смузи/ягодный.jpg" alt="">
+                        <h3>Ягодный смузи</h3>
+                        <span>Фреши и смузи</span>
+                        <p>Масса: 350мл</p>
+                        <div class="price">300₽</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-contents" id="juice">
+                <h1>Сок</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/сок/апельсин.jpg" alt="">
+                        <h3>Апельсиновый сок</h3>
+                        <span>сок</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">180₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/сок/яблочный.jpg" alt="">
+                        <h3>Яблочный сок</h3>
+                        <span>сок</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">180₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/сок/вишневый.jpg" alt="">
+                        <h3>Вишневый сок</h3>
+                        <span>сок</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">180₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/сок/томатный.jpg" alt="">
+                        <h3>Томатный сок</h3>
+                        <span>сок</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">180₽</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-contents" id="coffee">
+                <h1>Кофе</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/эспрессо.jpg" alt="">
+                        <h3>Эспрессо</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 30мл</p>
+                        <div class="price">150₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/дабл эспрессо.jpg" alt="">
+                        <h3>дабл Эспрессо</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 60мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/американо.jpg" alt="">
+                        <h3>Американо</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">150₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/капуч.jpg" alt="">
+                        <h3>Капучино</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">230₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/латте.jpg" alt="">
+                        <h3>Латте</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 300мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/раф.jpg" alt="">
+                        <h3>Раф</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 300мл</p>
+                        <div class="price">360₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/флет.jpg" alt="">
+                        <h3>Флэт Уайт</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 200мл</p>
+                        <div class="price">200₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/сироп.jpg" alt="">
+                        <h3>Сироп</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 30мл</p>
+                        <div class="price">70₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/кокосовое.jpg" alt="">
+                        <h3>Кокосовое молоко</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">20₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/миндаль.jpg" alt="">
+                        <h3>Миндальное молоко</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">20₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/кофе/фундук.jpg" alt="">
+                        <h3>Фундучное молоко</h3>
+                        <span>Кофе</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">20₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="tea">
+                <h1>Чаи</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/облепих.jpg" alt="">
+                        <h3>Облепиховый чай</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/зел.jpg" alt="">
+                        <h3>Травяной сбор</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/зел.jpg" alt="">
+                        <h3>Сенча</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/зел.jpg" alt="">
+                        <h3>Молочный улун</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/черный.jpg" alt="">
+                        <h3>Да хун пао</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/черный.jpg" alt="">
+                        <h3>Ассам</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/чай/черный.jpg" alt="">
+                        <h3>Эрл грей</h3>
+                        <span>Чай</span>
+                        <p>Масса: 600мл</p>
+                        <div class="price">250₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="hot-alco">
+                <h1>Горячие алкогольные</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Глинтвейн</h3>
+                        <span>Горячие алкогольные</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Имбирный тодди</h3>
+                        <span>Горячие алкогольные</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Тропический грог</h3>
+                        <span>Горячие алкогольные</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="water">
+                <h1>Минеральная вода</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/вода/вода.jpg" alt="">
+                        <h3>Dausuz б/г с/г 850мл</h3>
+                        <span>Минеральная вода</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">270₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/вода/вода.jpg" alt="">
+                        <h3>Dausuz б/г с/г 500мл</h3>
+                        <span>Минеральная вода</span>
+                        <p>Масса: 850мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Draft">
+                <h1>Пиво Draft</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/аффлигем.jpg" alt="">
+                        <h3>Аффлигем/Блонд Эль/Бельгия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft//блек шип.jpg" alt="">
+                        <h3>Блек шип/Стаут/Англия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">410₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/иван.jpg" alt="">
+                        <h3>Иван Цареевич/АПА/Россия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">?₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/майзелс.jpg" alt="">
+                        <h3>Майзелс/Вайс бир/Германия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/поклонка.jpg" alt="">
+                        <h3>Поклонка/Лагер/Россия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">370₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/руждефлер.jpg" alt="">
+                        <h3>Руж Де Флер/Эль/Россия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">430₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/силли.jpg" alt="">
+                        <h3>Силли/Бланш/Бельгия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">570₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/ферд светлый.jpg" alt="">
+                        <h3>Фердинант/Пилснер/Чехия/h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/эдельвейс.jpg" alt="">
+                        <h3>Эдельвейс/Вайсбир/Россия</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">430₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Фердинант полутемный</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">430₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/draft/эдельвейс.jpg" alt="">
+                        <h3>Роял сидр/Полусухой/Беларусь</h3>
+                        <span>Пиво Draft</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Jaws">
+                <h1>Jaws brewery</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/jaws/helles.jpg" alt="">
+                        <h3>Jaws Helles</h3>
+                        <span>Jaws brewery</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/jaws/breeze.jpg" alt="">
+                        <h3>Jaws Sour Breeze</h3>
+                        <span>Jaws brewery</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/jaws/nitro.jpg" alt="">
+                        <h3>Jaws Nitro Stout</h3>
+                        <span>Jaws brewery</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Brewlok">
+                <h1>Brewlok</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/brewlok/leshiy.jpg" alt="">
+                        <h3>Brewlok Lehsiy IPA</h3>
+                        <span>Brewlok</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/brewlok/kikimora.jpg" alt="">
+                        <h3>Brewlok Kikimora Milk Stout</h3>
+                        <span>Brewlok</span>
+                        <p>Масса: 500мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="red150">
+                <h1>Красное вино 150мл</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное150/шираз.jpg" alt="">
+                        <h3>Альма Велле Шираз</h3>
+                        <span>Красное</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">490₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное150/мальбек.jpg" alt="">
+                        <h3>Виньярдс Мальбек</h3>
+                        <span>Красное</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">530₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное150/конти.jpg" alt="">
+                        <h3>Конти Серристори</h3>
+                        <span>Красное</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">530₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="red750">
+                <h1>Красное вино 750мл</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное750/нуар.jpg" alt="">
+                        <h3>Ханс Баер Пино Нуар</h3>
+                        <span>Красное</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">3100₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное750/винодел.jpg" alt="">
+                        <h3>Винодел и Сомелье Пино Нуар</h3>
+                        <span>Красное</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">3100₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/красное750/эстелар.jpg" alt="">
+                        <h3>Эстелар каберне совиньон</h3>
+                        <span>Красное</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">3100₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="rose">
+                <h1>Розове вино</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/розове/маре.jpg" alt="">
+                        <h3>Маре Энд Гриль Розе</h3>
+                        <span>Розове</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">490₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="white150">
+                <h1>Белое вино 150мл</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое 150/маре.jpg" alt="">
+                        <h3>Маре Энд Гриль Уайт</h3>
+                        <span>Белое</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">490₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое 150/Шардоне.jpg" alt="">
+                        <h3>Ле Гранд Шардоне</h3>
+                        <span>Белое</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="white750">
+                <h1>Белое вино 750мл</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое750/вельлинер.jpg" alt="">
+                        <h3>Берккёнихь Грюнер Вельтлинер</h3>
+                        <span>Белое</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">2900₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое750/Кейп.jpg" alt="">
+                        <h3>Кейп Ориджинал Шенен Блан</h3>
+                        <span>Белое</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">2900₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое750/рислинг.jpg" alt="">
+                        <h3>Ханс Баер Рислинг</h3>
+                        <span>Белое</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">2900₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/Белое750/Хардис.jpg" alt="">
+                        <h3>Хардис Бин 141 Коломбар Шардоне</h3>
+                        <span>Белое</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">2900₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Sparkling150">
+                <h1>Игристое вино</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/игристое150/брют.jpg" alt="">
+                        <h3>Дос Каприкос Кава Брют</h3>
+                        <span>Игристое</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">430₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/игристое150/розе.jpg" alt="">
+                        <h3>Просеко Фиорино Розе</h3>
+                        <span>Игристое</span>
+                        <p>Масса: 150мл</p>
+                        <div class="price">430₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Sparkling750">
+                <h1>Игристое вино</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/игристое750/просеко.jpg" alt="">
+                        <h3>Каса Дефра Просекко</h3>
+                        <span>Игристое</span>
+                        <p>Масса: 750мл</p>
+                        <div class="price">3300₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="vermut">
+                <h1>Порто/Вермут</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/вермут/мартинез.jpg" alt="">
+                        <h3>Мартинез Файн Руби Порто</h3>
+                        <span>Порто</span>
+                        <p>Масса: 75мл</p>
+                        <div class="price">590₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="whisky">
+                <h1>Виски</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/виски/Бушмилз.jpg" alt="">
+                        <h3>Бушмилз Ориджинал</h3>
+                        <span>Виски</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">370₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/виски/хинч.jpg" alt="">
+                        <h3>Хинч Айриш Виски Смол Батч</h3>
+                        <span>Виски</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/виски/редлейбл.jpg" alt="">
+                        <h3>Johnnie Walker Red Label</h3>
+                        <span>Виски</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">370₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/виски/блеклейбл.jpg" alt="">
+                        <h3>Johnnie Walker Black Label</h3>
+                        <span>Виски</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">690₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="Scotland">
+                <h1>Односолодовые</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/скотч/моссберн.jpg" alt="">
+                        <h3>Моссберн Блендед Молт Скотч</h3>
+                        <span>Односолодовые</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">690₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/скотч/моссберн.jpg" alt="">
+                        <h3>Моссберн Блендед Айла</h3>
+                        <span>Односолодовые</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">690₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="rum">
+                <h1>Ром</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/морган голд.jpg" alt="">
+                        <h3>Капитан Морган Золотой</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/морган темный.jpg" alt="">
+                        <h3>Капитан Морган Темный</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/морган белый.jpg" alt="">
+                        <h3>Капитан Морган Белый</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/кракен.jpg" alt="">
+                        <h3>Кракен Тёмный Пряный</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">590₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/ямайка.jpg" alt="">
+                        <h3>Мезан Ямайка ХО</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">530₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/чирики.jpg" alt="">
+                        <h3>Мезан Чирики</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/ром/кашаса.jpg" alt="">
+                        <h3>Кашаса 51</h3>
+                        <span>Ром</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">350₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="gin">
+                <h1>Джин</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/джин/оушен.jpg" alt="">
+                        <h3>Этсу Пасифик Оушен</h3>
+                        <span>Джин</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">650₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/джин/юдзу.jpg" alt="">
+                        <h3>Этсу Дабл Юдзу</h3>
+                        <span>Джин</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">650₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/джин/гордонс.jpg" alt="">
+                        <h3>Гордонс</h3>
+                        <span>Джин</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">330₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="digestif">
+                <h1>Дижестив</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/дижестив/ягер.jpg" alt="">
+                        <h3>Jagermeister</h3>
+                        <span>Дижестив</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/джин/юдзу.jpg" alt="">
+                        <h3>Ляйбвехтер</h3>
+                        <span>Дижестив</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="dist">
+                <h1>Дистиляты</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/дистиляты/айва.jpg" alt="">
+                        <h3>Ракия Айва</h3>
+                        <span>Дистиляты</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/дистиляты/вильямовка.jpg" alt="">
+                        <h3>Ракия Вильямовка</h3>
+                        <span>Дистиляты</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/дистиляты/слива.jpg" alt="">
+                        <h3>Ракия Слива</h3>
+                        <span>Дистиляты</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">390₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="brend">
+                <h1>Бренди</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/бренди/бренди.jpg" alt="">
+                        <h3>Векья Романья</h3>
+                        <span>Бренди</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="vodka">
+                <h1>Водка</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/водка/онегин.jpg" alt="">
+                        <h3>Онегин</h3>
+                        <span>Водка</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">300₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/водка/зерна.jpg" alt="">
+                        <h3>Зерна севера</h3>
+                        <span>Водка</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">200₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="nast">
+                <h1>Настойки</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/настойки/все.jpg" alt="">
+                        <h3>Лимончелло</h3>
+                        <span>Настойки</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">190₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/настойки/все.jpg" alt="">
+                        <h3>Клюква</h3>
+                        <span>Настойки</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">190₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/настойки/все.jpg" alt="">
+                        <h3>Малина-лайм</h3>
+                        <span>Настойки</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">190₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/настойки/все.jpg" alt="">
+                        <h3>Клубника-чили</h3>
+                        <span>Настойки</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">190₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/bar/настойки/все.jpg" alt="">
+                        <h3>Хреновуха</h3>
+                        <span>Настойки</span>
+                        <p>Масса: 50мл</p>
+                        <div class="price">190₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="coctail">
+                <h1>Коктейли</h1>
+                <div class="cart-inner">
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Dalmatian Negroni</h3>
+                        <span>Коктейли</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Martini Fiero & Tonic</h3>
+                        <span>Коктейли</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Whisky Sour</h3>
+                        <span>Коктейли</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>Aperol Sprits</h3>
+                        <span>Коктейли</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">790₽</div>
+                    </div>
+                    <div class="cart">
+                        <img class="img-title" src="./css/img/pngtree-question-mark-vector-icon-png-image_963326.jpg" alt="">
+                        <h3>White Russian</h3>
+                        <span>Коктейли</span>
+                        <p>Масса: ?мл</p>
+                        <div class="price">450₽</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row-footer">
+                <div class="item-footer">
+                    <h2>POKLONKA</h2>
+                    <ul>
+                        <li><a href="https://instagram.com/poklonka_gastrobar?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://t.me/poklonka_bar"><i class="fa-brands fa-telegram"></i></a></li>
+                    </ul>
+                    <br>
+                    <p>Адрес: Генерала Ермолова 4</p>
+                </div>
+                <div class="item-footer footer-btn">
+                    <a href="tel:+79163255592" class="btn">Позвонить нам</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/preloader.js"></script>
+
+</body>
+</html>
